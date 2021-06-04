@@ -22,6 +22,7 @@ const formControl = document.getElementsByClassName("form-control");
 // });
 
 // Refactored
+// Clears error messages if text is entered
 for (let i = 0; i < formControl.length; i++) {
   formControl[i].addEventListener("input", function () {
     errorLabels[i].innerHTML = "";
@@ -39,10 +40,12 @@ formElement.addEventListener("submit", function (event) {
 
   // validate form here
   if (!inputEmail.value) {
+    event.preventDefault();
     errorLabelEmail.innerHTML = "Please enter an email address.";
   }
 
   if (!inputPassword.value) {
+    event.preventDefault();
     errorLabelPass.innerHTML = "Please enter a password.";
   }
 
