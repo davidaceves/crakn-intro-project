@@ -2,6 +2,13 @@ body {
   background-color: #f3f3f3;
 }
 
+.container {
+  display: grid;
+  max-width: 80%;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+
 .container div.card {
-  width: 22rem;
+  width: 95%;
+  margin-bottom: 5%;
 }
